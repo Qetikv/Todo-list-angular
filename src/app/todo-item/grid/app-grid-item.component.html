@@ -1,0 +1,15 @@
+<mat-grid-list cols="10" rowHeight="2:0.5">
+  <mat-grid-tile *ngFor="let tile of tiles"
+  [colspan]="tile.cols"
+  [rowspan]="tile.rows"
+  onmouseover="this.style.background='green'"
+  ></mat-grid-tile>
+  <!-- <mat-grid-tile onmouseover="this.style.background='green'">1</mat-grid-tile>
+  <mat-grid-tile onmouseover="this.style.background='green'">2</mat-grid-tile>
+  <mat-grid-tile onmouseover="this.style.background='green'">3</mat-grid-tile>
+  <mat-grid-tile onmouseover="this.style.background='green'">4</mat-grid-tile>
+  <mat-grid-tile onmouseover="this.style.background='green'">5</mat-grid-tile>
+  <mat-grid-tile onmouseover="this.style.background='green'">6</mat-grid-tile>
+  <mat-grid-tile onmouseover="this.style.background='green'">7</mat-grid-tile>
+  <mat-grid-tile onmouseover="this.style.background='green'">8</mat-grid-tile> -->
+</mat-grid-list>
