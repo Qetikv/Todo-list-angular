@@ -1,0 +1,60 @@
+<form class="example-form">
+  <form (submit)="addNewTask()">
+		<input
+			type="text"
+			name="inputTodo"
+			placeholder="Enter todo..."
+			class="todo-input"
+			[(ngModel)]="newTask"
+		/>
+    <select type="text" class="selectDifficulty" name="difficulty" [(ngModel)]="difficulty" placeholder="Difficulty">
+      <option value="" selected disabled>Difficulty</option>
+      <option value="Easy">Easy</option>
+      <option value="Normal">Normal</option>
+      <option value="Hard">Hard</option>
+      </select>
+		<input type="submit" value="Add Todo" class="todo-submit" />
+    <!-- <mat-form-field appearance="fill">
+  <mat-label>Choose a difficulty</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let task of todoTask" [value] = "task.name">
+      {{task.difficulty}}</mat-option>
+  </mat-select>
+</mat-form-field> -->
+	</form>
+
+<!-- <button type="submit"  class="btn btn-primary" (click)="addNewTask()">Add</button> -->
+
+  <div style="display:flex; flex-direction: row;">
+    <mat-card class="todo-tasks">
+      <header>Todo</header>
+      <div class="Todo-tasks" *ngFor="let task of todoTask">
+        <mat-card>{{task.name}}
+          <mat-icon (click)="moveToInProgress(task)">arrow_right_alt</mat-icon>
+          <mat-icon (click)="deleteTaskToDo(task)">delete</mat-icon>
+          <div class="difficulty">{{task.difficulty}}</div>
+       </mat-card>
+    </div>
+    </mat-card>
+    <mat-card class="inProgress-tasks">
+      <header>In progress</header>
+      <div class="Inprogress-tasks" *ngFor="let task of inProgressTask">
+        <mat-card>{{task.name}}
+        <mat-icon (click)="backToTodo(task)">arrow_back</mat-icon>
+        <mat-icon (click)="moveToDone(task)">arrow_forward</mat-icon>
+        <mat-icon (click)="deleteTaskInProgress(task)">delete</mat-icon>
+        <div class="difficulty">{{task.difficulty}}</div>
+      </mat-card>
+    </div>
+    </mat-card>
+    <mat-card class="done-tasks">
+      <header>Done</header>
+      <div class="Done-tasks" *ngFor="let task of doneTask">
+        <mat-card>{{task.name}}
+          <mat-icon (click)="backToInProgress(task)">arrow_back</mat-icon>
+          <mat-icon (click)="deleteTaskInDone(task)">delete</mat-icon>
+          <div class="difficulty">{{task.difficulty}}</div>
+      </mat-card>
+    </div>
+    </mat-card>
+ </div>
