@@ -13,34 +13,32 @@ export interface Tile {
 })
 export class GridStyleComponent  {
 
-breakpoint: number = 3;
-
   tiles: Tile[] = [
- {cols: 2, rows: 1 },
- {cols: 2, rows: 1 },
- {cols: 2, rows: 1},
- {cols: 2, rows: 1},
- {cols: 2, rows: 1},
- {cols: 2, rows: 1},
- {cols: 2, rows: 1 },
- {cols: 2, rows: 1 },
- {cols: 2, rows: 1},
- {cols: 2, rows: 1},
- {cols: 2, rows: 1},
- {cols: 2, rows: 1 },
- {cols: 2, rows: 1 },
- {cols: 2, rows: 1},
- {cols: 2, rows: 1},
- {cols: 2, rows: 1},
- {cols: 2, rows: 1 },
- {cols: 2, rows: 1 },
- {cols: 2, rows: 1},
- {cols: 2, rows: 1},
- {cols: 2, rows: 1},
- {cols: 2, rows: 1 },
- {cols: 2, rows: 1 },
- {cols: 2, rows: 1},
- {cols: 2, rows: 1}
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1},
+     {cols: 2, rows: 1}
  ]
 
 
