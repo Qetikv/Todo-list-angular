@@ -54,15 +54,24 @@ export class TodoItemComponent implements OnInit {
   }
 
   deleteTaskToDo(task:any) {
-    this.todoTask.splice(task, 1)
+    const index: number = this.todoTask.indexOf(task);
+    if (index !== -1) {
+        this.todoTask.splice(index, 1);
+    }
   }
 
   deleteTaskInProgress(task:any) {
-    this.inProgressTask.splice(task, 1)
+    const index: number = this.inProgressTask.indexOf(task);
+    if (index !== -1) {
+        this.inProgressTask.splice(index, 1);
+    }
   }
 
   deleteTaskInDone(task:any) {
-    this.doneTask.splice(task, 1)
+    const index: number = this.doneTask.indexOf(task);
+    if (index !== -1) {
+        this.doneTask.splice(index, 1);
+    }
   }
 
   addNewTask(){
